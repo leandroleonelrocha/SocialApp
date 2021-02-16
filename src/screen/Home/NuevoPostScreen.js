@@ -159,13 +159,13 @@ export default function NuevoPostScreen(){
           <Image 
             source={{uri: imagen.imagePath }}
             style={{
-              width: 300,
-              height: 300
+              width: '50%',
+              height: '50%'
             }}
           />
           
           <TouchableOpacity 
-            style={{ backgroundColor: '#E7E7E7', width: 150, height: 50, justifyContent: 'center', alignItems:'center', marginTop: 10 }}
+            style={{ backgroundColor: '#E7E7E7', width: 100, height: 30, justifyContent: 'center', alignItems:'center', marginTop: 10 }}
             onPress={ SelectImage }
           >
             <Text>Guardar</Text>

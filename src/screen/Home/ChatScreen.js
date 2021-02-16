@@ -14,7 +14,7 @@ export default function ChatScreen(){
  
     return(
         <>
-        <View style={{ borderWidth: 1, flex: 1 }}>
+        <View style={{ flex: 1 }}>
             <View style={{ width: '90%', marginHorizontal:20, marginTop:20 ,alignContent: 'center', justifyContent: 'center'}}>
                 <Searchbar
                     placeholder="Buscar"
@@ -23,12 +23,12 @@ export default function ChatScreen(){
                     style={{ borderRadius: 10, alignContent: 'center', justifyContent: 'center' }}
                 />
             </View>
-            <View style={{ flexDirection: 'row', borderWidth: 1, marginTop: 20, marginLeft: 20, marginRight: 20 }}>
+            <View style={{ flexDirection: 'row',  marginTop: 20, marginLeft: 20, marginRight: 20 }}>
                 <Text style={{ fontSize: 20 }}>Mensajes</Text>
                 
             </View>
 
-            <ScrollView style={{ borderWidth:1, marginTop: 20, marginHorizontal: 20}}>
+            <ScrollView style={{ marginTop: 20, marginHorizontal: 20}}>
                 <FlatList
                     
                     data={[
@@ -54,17 +54,23 @@ export default function ChatScreen(){
                     ]}
                     renderItem={ ({item}) => 
                     <View style={styles.viewList}>
-                        <View style={{ borderWidth: 1}}>
+                        <View>
                             <Image source={{uri:'https://picsum.photos/700'}} style={{ height: 50, width: 50, borderRadius: 50 }} />
                         </View>
-                        <View style={{ borderWidth: 1, marginLeft: 10, width: '70%' }}>
+                        <View style={{ marginLeft: 10, width: '65%' }}>
                             <Text style={styles.item}>{item.key}</Text>
                             <Text>Hola que tal?</Text>
                         </View>
 
-                        <View style={{  marginLeft: 10}}>
-                            <TouchableOpacity>
-                                <Image source={camera} style={{ height: 30, width: 30, tintColor: colors.primary }} />
+                        <View style={{ marginLeft: 10, alignContent: 'center', alignItems: 'center'}}>
+                            <TouchableOpacity
+                                style={{
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                    marginTop: 15
+                                }}
+                            >
+                                <Image source={camera} style={{ height: 20, width: 20, tintColor: colors.primary }} />
                             </TouchableOpacity>
                         </View>
                         
@@ -94,9 +100,10 @@ const styles = StyleSheet.create({
         //height: 44,
     },
     viewList:{
-        borderWidth: 1,
+     
         flexDirection: 'row',
-        padding: 5
+        padding: 5,
+        marginTop: 10
     }
 
 })
