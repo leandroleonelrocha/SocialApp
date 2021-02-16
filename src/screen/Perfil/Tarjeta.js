@@ -50,7 +50,7 @@ export default function Tarjeta(){
     return(
 
         <View style={{ flex:1 }}>
-
+        <ScrollView>
             <Header />
 
             { !changeForm ? (
@@ -258,7 +258,7 @@ export default function Tarjeta(){
                 </View>
                 </>
             )}
-
+            </ScrollView>
         </View>
 
        
