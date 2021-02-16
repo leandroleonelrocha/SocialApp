@@ -15,6 +15,7 @@ export const colors = {
     lightGray3: "#EFEFF1",
     lightGray4: "#F8F8F9",
     transparent: "transparent",
+    blue: "#4496DA"
 
 };
 

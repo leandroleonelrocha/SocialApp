@@ -1,16 +1,18 @@
 import React, {useState} from 'react';
-import { View, SafeAreaView, StyleSheet, TouchableOpacity, Image, FlatList} from 'react-native';
-import { Text, Card, Button, Title,Paragraph, TextInput, Avatar } from 'react-native-paper';
+import { View, SafeAreaView, StyleSheet, TouchableOpacity, Image, FlatList, TextInput, Touchable} from 'react-native';
+import { Text, Card, Button, Title,Paragraph, Avatar } from 'react-native-paper';
 import firebase from '../../utils/firebase';
 import 'firebase/database';
 import {colors } from '../../utils/tema';
 import { ScrollView } from 'react-native-gesture-handler';
 import Header from '../../components/Perfil/Header';
-import chunk from "lodash"
+import chunk from "lodash";
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 export default function Tarjeta(){
 
     const [form, setForm] = useState({});
-    
+    const [changeForm, setChangeForm] = useState(true)
     const post = [
      [
         {
@@ -51,6 +53,8 @@ export default function Tarjeta(){
 
             <Header />
 
+            { !changeForm ? (
+            <>
             <View  style={{ flexDirection: 'row', borderWidth: 1, width: '100%' }}>
                 <View style={{ padding: 10 }}>
                     <TouchableOpacity>
@@ -136,7 +140,124 @@ export default function Tarjeta(){
                     </ScrollView>
                 </View>               
             </View>
-            
+            </>
+            )
+            :
+            (
+                <>
+                <View  style={{ width: '100%', justifyContent: 'center', alignItems: 'center' }}>
+                    <View style={{justifyContent: 'center', alignItems: 'center'}}>
+                        <TouchableOpacity
+                            style={{
+                                marginTop: 10
+                            }}
+                        >
+                            <Image source={{uri:'https://picsum.photos/700'}} style={{ height: 100, width: 100, borderRadius: 50 }} />
+                        </TouchableOpacity>  
+                        <Text 
+                            style={{
+                             
+                                marginTop: 10,
+                                fontSize: 20,
+                                color: colors.blue
+                            }}
+                            onPress={ () => console.log('cambiar')}
+                        >
+                            Cambiar foto de perfil
+                        </Text>
+                    </View>
+                    
+                </View>
+                <View 
+                    style={{
+                        paddingHorizontal: 20,
+                        marginTop: 10
+
+                    }}
+                >
+                    <TextInput 
+                        placeholder="Nombre"
+                        style={{
+                            fontSize: 15,
+                            height: 50,
+                            borderBottomWidth: 0.3
+                   
+                        }}
+                    />
+                </View>
+                <View 
+                    style={{
+                        paddingHorizontal: 20,
+                        marginTop: 10
+                    }}
+                >
+                    <TextInput 
+                        placeholder="Nombre de usuario"
+                        style={{
+                            fontSize: 15,
+                            height: 50,
+                            borderBottomWidth: 0.3
+                        }}
+                    />
+                </View>
+                <View 
+                    style={{
+                        paddingHorizontal: 20,
+                        marginTop: 10
+
+                    }}
+                >
+                    <TextInput 
+                        placeholder="Sitio web"
+                        style={{
+                            fontSize: 15,
+                            height: 100,
+                            borderBottomWidth: 0.3
+                        }}
+                    />
+                </View>
+                <View 
+                    style={{
+                        paddingHorizontal: 20,
+                        marginTop: 10
+                    }}
+                >
+                    <TextInput 
+                        placeholder="Presentacion"
+                        style={{
+                            fontSize: 15,
+                            height: 50,
+                            borderBottomWidth: 0.3
+                        }}
+                    />
+                </View>
+                <View 
+                    style={{
+                        paddingHorizontal: 20,
+                        marginTop: 20,
+                        flexDirection:'row'
+
+                    }}
+                >
+
+                    <View 
+                        style={{  width: '50%',alignItems:'flex-start'}}
+                    >
+                        <TouchableOpacity>
+                            <Icon name="close" size={30} color={colors.primary} />
+                        </TouchableOpacity>
+                    </View>   
+                    <View
+                        style={{ width: '50%',alignItems:'flex-end'}}
+                    >
+                        <TouchableOpacity>
+                            <Icon name="check" size={30} color={colors.primary} />
+                        </TouchableOpacity>
+                    </View>   
+
+                </View>
+                </>
+            )}
 
         </View>
 
