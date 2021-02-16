@@ -248,7 +248,7 @@ export default function Tarjeta(){
                         </TouchableOpacity>
                     </View>   
                     <View
-                        style={{ width: '50%',alignItems:'flex-end'}}
+                        style={{ width: '50%',alignItems:'flex-end', marginBottom: 20}}
                     >
                         <TouchableOpacity>
                             <Icon name="check" size={30} color={colors.primary} />
