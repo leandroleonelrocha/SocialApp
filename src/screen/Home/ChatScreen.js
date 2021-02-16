@@ -15,7 +15,7 @@ export default function ChatScreen(){
     return(
         <>
         <View style={{ borderWidth: 1, flex: 1 }}>
-            <View style={{ width: '90%', marginHorizontal:20, marginTop: 20 ,alignContent: 'center', justifyContent: 'center'}}>
+            <View style={{ width: '90%', marginHorizontal:20, marginTop:20 ,alignContent: 'center', justifyContent: 'center'}}>
                 <Searchbar
                     placeholder="Buscar"
                     onChangeText={onChangeSearch}
@@ -28,7 +28,7 @@ export default function ChatScreen(){
                 
             </View>
 
-            <ScrollView style={{ borderWidth:1, marginTop: 20, marginLeft: 20, marginRight: 20}}>
+            <ScrollView style={{ borderWidth:1, marginTop: 20, marginHorizontal: 20}}>
                 <FlatList
                     
                     data={[
@@ -57,7 +57,7 @@ export default function ChatScreen(){
                         <View style={{ borderWidth: 1}}>
                             <Image source={{uri:'https://picsum.photos/700'}} style={{ height: 50, width: 50, borderRadius: 50 }} />
                         </View>
-                        <View style={{ borderWidth: 1, marginLeft: 10, width: 230 }}>
+                        <View style={{ borderWidth: 1, marginLeft: 10, width: '70%' }}>
                             <Text style={styles.item}>{item.key}</Text>
                             <Text>Hola que tal?</Text>
                         </View>
