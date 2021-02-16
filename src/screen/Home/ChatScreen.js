@@ -15,7 +15,7 @@ export default function ChatScreen(){
     return(
         <>
         <View style={{ borderWidth: 1, flex: 1 }}>
-            <View style={{ width: 370, marginTop: 10, marginLeft: 20, alignContent: 'center', justifyContent: 'center'}}>
+            <View style={{ width: '90%', marginHorizontal:20, marginTop: 20 ,alignContent: 'center', justifyContent: 'center'}}>
                 <Searchbar
                     placeholder="Buscar"
                     onChangeText={onChangeSearch}
