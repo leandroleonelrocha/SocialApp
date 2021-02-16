@@ -78,6 +78,6 @@ export default function App(){
 const styles = StyleSheet.create({
   content:{
     height: '100%',
-    backgroundColor: colors.primary3,
+    //backgroundColor: colors.primary3,
   }
 })  

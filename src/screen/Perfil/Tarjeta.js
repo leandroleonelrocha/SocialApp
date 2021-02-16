@@ -51,8 +51,8 @@ export default function Tarjeta(){
 
             <Header />
 
-            <View  style={{ flexDirection: 'row' }}>
-                <View style={{ padding: 20 }}>
+            <View  style={{ flexDirection: 'row', borderWidth: 1, width: '100%' }}>
+                <View style={{ padding: 10 }}>
                     <TouchableOpacity>
                         <Image source={{uri:'https://picsum.photos/700'}} style={{ height: 100, width: 100, borderRadius: 50 }} />
                     </TouchableOpacity>  

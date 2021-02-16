@@ -52,9 +52,9 @@ export default function Header(props){
     return(
         <Appbar.Header style={styles.content}>
             <Appbar.Content title="Social App" />
-            <Appbar.Action icon="comment-plus" onPress={  () => {navigation.navigate('NuevoPostScreen')}  } />
+            <Appbar.Action icon="comment-plus" color={colors.primary} onPress={  () => {navigation.navigate('NuevoPostScreen')}  } />
             
-            <Appbar.Action icon="message-text" onPress={() => {navigation.navigate('ChatScreen')} }/>
+            <Appbar.Action icon="message-text" color={colors.primary} onPress={() => {navigation.navigate('ChatScreen')} }/>
         </Appbar.Header>
     )
 }
@@ -62,7 +62,7 @@ export default function Header(props){
 const styles = StyleSheet.create({
 
     content:{
-      backgroundColor: colors.primary3
+      backgroundColor: colors.white
     }
 
 })
